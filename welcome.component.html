@@ -1,0 +1,15 @@
+<h1>Welome</h1>
+
+<div class="container">
+    Welome {{name}} to our new application. You can manage your todos <a routerLink="/todos">here</a>
+</div>
+
+<div class="container">
+    Click here to get a customized welcome message:
+    <button (click)="getWelcomeMessageWithParameter()" class="btn btn-success">Get Welcome Message</button>
+</div>
+
+<div class="container" *ngIf="welcomeMessageFromService">
+    <h2>Your customized welcome message</h2>
+    {{welcomeMessageFromService}} <!-- Pulling the message from the frontend-->
+</div>
